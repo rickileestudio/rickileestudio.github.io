@@ -1,7 +1,104 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <ul>
+        <li><a href="/about.html" data-text="About">About</a></li>
+        <li><a href="/design.html" data-text="Design">Design</a></li>
+        <li><a href="/art.html" data-text="Art">Art</a></li>
+        <li><a href="/photography.html" data-text="Photography">Photography</a></li>
+        <li><a href="/progress.html" data-text="In progress">In progress</a></li>
+        <li><a href="/contact.html" data-text="Contact">Contact</a></li>
+      </ul>
 </body>
 </html>
+
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #f1eee1;
+}
+ul {
+  position: relative;
+}
+ul li {
+  list-style: none;
+  text-align: center;
+}
+ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 3em;
+  padding: 5px 20px;
+  display: inline-flex;
+  font-weight: 700;
+  transition: 0.5s;
+}
+ul:hover li a {
+  color: #14141421;
+}
+ul li:hover a {
+  color: #141414;
+  background: transparent;
+}
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 500px;
+  transition: letter-spacing 0.5s, left 0.5s;
+  transition: 0.5s;
+}
+ul li a:hover:before {
+  content: attr(data-text);
+  opacity: 1;
+  left: 50%;
+  letter-spacing: 10px;
+  width: 1200px;
+  height: 1200px;
+  transition: 0.5s;
+}
+ul li:nth-child(6n + 1) a:before {
+  background: #0470fe;
+}
+ul li:nth-child(6n + 2) a:before {
+  background: #ff7675;
+}
+ul li:nth-child(6n + 3) a:before {
+  background: #15feb0;
+}
+ul li:nth-child(6n + 4) a:before {
+  background: #d19bfe;
+}
+ul li:nth-child(6n + 5) a:before {
+  background: #ff95ca;
+}
+ul li:nth-child(6n + 6) a:before {
+  background: #ffeaa7;
+}
+
+
+</style>
