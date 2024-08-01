@@ -4,6 +4,13 @@
 
   </header>
 <body>
+  <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+
 <div class="grid-container">
     <div class="item1"><img src="Assets\creative_me3.png" height="320"><h4>A grid container contains grid items. By default, a container has one grid item for each column, in each row, but you can style the grid items so that they will span multiple columns and/or rows.</h4></div>
     <div class="item1"><img src="Assets\Crystal-Repeatv2.png" height="320"><h4>A grid container contains grid items. By default, a container has one grid item for each column, in each row, but you can style the grid items so that they will span multiple columns and/or rows.</h4></div>
@@ -21,6 +28,9 @@
 
 
 <style>
+body{
+  background: #f1eee1;
+}
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -38,6 +48,7 @@
   font-size: 30px;
   margin-left: 10%;
   margin-right: 10%;
+  background: #f1eee1;
 }
 h4 {
   font-family: proxima-nova;
@@ -50,5 +61,26 @@ h4 {
   text-align: center;
   letter-spacing: 3px;
   color: #000;
+}
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  color: rgb(41, 41, 41);
+  text-decoration: underline;
+}
+
+.topnav a.active {
+  color: rgb(0, 97, 153);
 }
 </style>
