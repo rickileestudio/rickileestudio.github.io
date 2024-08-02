@@ -1,61 +1,80 @@
 <!DOCTYPE html>
 <html>
 <header>
-    <ul>
-        <li><a href="/about.html" data-text="About">About</a></li>
-        <li><a href="/design.html" data-text="Design">Design</a></li>
-        <li><a href="/art.html" data-text="Art">Art</a></li>
-        <li><a href="/photography.html" data-text="Photography">Photography</a></li>
-        <li><a href="/progress.html" data-text="In progress">In progress</a></li>
-        <li><a href="/contact.html" data-text="Contact">Contact</a></li>
-      </ul>
+
 </header>
 <body>      
-
+  <div class="topnav">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/design.html">Design</a>
+    <a class="active" href="/Art.html">Art</a>
+    <a href="#news">News</a>
+    <a href="/photography.html">Photography</a>
+    <a href="/in-progress.html">In Progress</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </body>
 </html>
 
 
 
 <style>
-header{
-    margin-top: 200px;
-    margin-left: 40px;
-}
 body{
-    background: #f1eee1;
+  background: #f1eee1;
 }
-.redt{
-    color:red;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  /*background-color: #2196F3;*/
+  padding: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Cairo', sans-serif;}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
+  background: #f1eee1;
+}
+h4 {
+  font-family: proxima-nova;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6em;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 3px;
+  color: #000;
+}
+.topnav {
   overflow: hidden;
-  background-color: #33333300;
+  font-family: proxima-nova;
 }
 
-li {
+.topnav a {
   float: left;
-}
-
-li a {
-  display: block;
-  color: rgb(14, 14, 14);
+  color: #000000;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 35px;
-}
-li a:hover{
-    color: rgb(27, 211, 140);
-    font-style:italic;
+  font-size: 17px;
+  font-family: proxima-nova;
 }
 
+.topnav a:hover {
+  color: rgb(41, 41, 41);
+  text-decoration: underline;
+}
+
+.topnav a.active {
+  color: rgb(0, 97, 153);
+}
 </style>
